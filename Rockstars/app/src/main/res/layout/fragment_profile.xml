@@ -1,100 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_profile"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#D2671F">
+
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Profile"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="30sp" />
+
         <Button
             android:id="@+id/button_toolbar3"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:visibility="gone"
-            android:background="@drawable/ic_check_white_24dp"
+            android:layout_gravity="end"
             android:layout_marginRight="15dp"
-            android:layout_gravity="end" />
+            android:background="@drawable/ic_check_white_24dp"
+            android:visibility="gone" />
+
         <Button
             android:id="@+id/button_toolbar"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/ic_edit_white_24dp"
+            android:layout_gravity="end"
             android:layout_marginRight="15dp"
-            android:layout_gravity="end" />
+            android:background="@drawable/ic_edit_white_24dp" />
+
         <Button
             android:id="@+id/button_toolbar2"
             android:layout_width="24dp"
-            android:layout_marginRight="30dp"
-            android:visibility="gone"
             android:layout_height="24dp"
+            android:layout_gravity="left"
+            android:layout_marginRight="30dp"
             android:background="@drawable/ic_delete_white_24dp"
-            android:layout_gravity="left" />
+            android:visibility="gone" />
 
     </android.support.v7.widget.Toolbar>
-    <RelativeLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:background="#C7B9AD"
-        android:layout_height="300dp">
-        <ImageView
-            android:id="@+id/IMG_picture_profile"
-            android:src="@drawable/ic_profile_orange_128dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:id="@+id/IMG_btn_picture_profile"
-            android:src="@drawable/ic_camera_blue_64dp"
-            android:visibility="gone"
-            android:layout_marginTop="250dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="64dp"
-            android:layout_height="64dp" />
+            android:layout_height="match_parent">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#C7B9AD">
 
-    <TextView
-        android:id="@+id/TXT_name_profile"
-        android:text="nom_du_profile"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/EDT_name_profile"
-        android:text="nom_du_profile"
-        android:layout_marginTop="20dp"
-        android:visibility="gone"
-        android:background="#D2671F"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/BTN_name_profile"
-        android:text="nom_du_profile"
-        android:layout_marginTop="20dp"
-        android:visibility="gone"
-        android:textSize="20sp"
-        android:background="#D2671F"
-        android:textColor="#FFFFFF"
-        android:drawableRight="@drawable/ic_edit_blue_24dp"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/IMG_picture_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_profile_orange_128dp" />
+
+                <ImageView
+                    android:id="@+id/IMG_btn_picture_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp"
+                    android:src="@drawable/ic_camera_blue_64dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TXT_name_profile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="nom_du_profile"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/EDT_name_profile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#D2671F"
+                android:padding="10dp"
+                android:text="nom_du_profile"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/BTN_name_profile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#D2671F"
+                android:drawableRight="@drawable/ic_edit_blue_24dp"
+                android:padding="10dp"
+                android:text="nom_du_profile"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
