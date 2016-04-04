@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_raw"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/IMG_picture"
+        android:padding="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/alert_dark_frame"
+        />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignTop="@+id/IMG_picture"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/IMG_picture">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/TXT_rockstar_name"
+            android:text="rockstar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/TXT_rockstar_status"
+            android:text="rockstar_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/CHK_bookmark"
+        android:paddingTop="25dp"
+        android:paddingRight="25dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/BTN_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_bin_black_24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
